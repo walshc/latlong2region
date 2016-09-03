@@ -9,7 +9,7 @@ latlong2region <- function(p, shp, closest = TRUE) {
     }
     p <- sp::SpatialPoints(p, proj4string = sp::CRS(proj))
   }
-  df <- cbind(coordinates(p), sp::over(x = p, y = shp))
+  df <- cbind(sp::coordinates(p), sp::over(x = p, y = shp))
   names(df)[1:2] <- c("lon", "lat")
 
 
