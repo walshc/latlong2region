@@ -48,3 +48,4 @@ latlong2region(p, shp)
 2  121455687  479135404        FALSE
 3 2448400204 1785626819         TRUE
 ```
+The `used.closest` variable indicates whether or not the coordinates were matched by using the closest region.
