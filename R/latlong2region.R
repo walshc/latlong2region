@@ -1,12 +1,13 @@
 latlong2region <- function(p, shp, closest = TRUE) {
 
-  shp <- sp::spTransform(shp, CRS("+proj=longlat +datum=WGS84"))
+  proj <- "+proj=longlat +datum=WGS84"
+  shp <- sp::spTransform(shp, CRS(proj))
 
   if (class(p) != "SpatialPoints") {
     if (class(p) == "numeric") {
       p <- matrix(p, ncol = 2)
     }
-    p <- SpatialPoints(p, proj4string = CRS("+proj=longlat +datum=WGS84"))
+    p <- sp::SpatialPoints(p, proj4string = sp::CRS(proj))
   }
   df <- cbind(coordinates(p), sp::over(x = p, y = shp))
   names(df)[1:2] <- c("lon", "lat")
