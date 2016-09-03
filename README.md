@@ -25,7 +25,8 @@ df <- data.frame(name = c("New York", "San Francisco", "Chicago"),
 ```
 For demonstration purposes, the coordinates for Chicago are in the water so they won't be matched to any county.
 
-![Chicago](/images/chicago.png?raw=true "Chicago")
+
+<img src="https://github.com/walshc/latlong2region/blob/master/images/chicago.png?raw=true" width="200">
 
 The function will find the county the point is closest to:
 
