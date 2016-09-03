@@ -17,12 +17,16 @@ download.file("http://www2.census.gov/geo/tiger/GENZ2015/shp/cb_2015_us_county_5
 unzip("us_counties.zip")
 shp <- rgdal::readOGR(".", "cb_2015_us_county_500k")
 ```
-Create a `data.frame` of coordinates. Here, the coordinates for Chicago are in Lake Michigan so they won't be matched to any county.
+Create a `data.frame` of sample coordinates:
 ```r
 df <- data.frame(name = c("New York", "San Francisco", "Chicago"),
                  lon  = c(-74.00594, -122.41942, -87.61),
                  lat  = c(40.71278, 37.77493, 41.87811))
 ```
+For demonstration purposes, the coordinates for Chicago are in the water so they won't be matched to any county.
+
+![Chicago](/images/chicago.png?raw=true "Chicago")
+
 The function will find the county the point is closest to:
 
 ```r
