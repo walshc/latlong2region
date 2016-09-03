@@ -1,6 +1,6 @@
 latlong2region <- function(p, shp, closest = TRUE) {
 
-  shp <- spTransform(shp, CRS("+proj=longlat +datum=WGS84"))
+  shp <- sp::spTransform(shp, CRS("+proj=longlat +datum=WGS84"))
 
   if (class(p) != "SpatialPoints") {
     if (class(p) == "numeric") {
