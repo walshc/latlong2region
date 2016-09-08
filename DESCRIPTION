@@ -11,6 +11,7 @@ Imports:
     geosphere,
     ggplot2,
     maptools,
+    rgdal,
     sp
 License: GPL-3
 URL: https://github.com/walshc/latlong2region

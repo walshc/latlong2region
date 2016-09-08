@@ -1,1 +1,2 @@
+import(rgdal)
 export(latlong2region)
