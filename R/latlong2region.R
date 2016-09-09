@@ -26,7 +26,6 @@ latlong2region <- function(p, shp, closest = TRUE) {
       message(length(unmatched), " point(s) not inside any region.",
               " Assigning to closest region.")
       # Convert the shapefile into a data.frame
-      require(maptools)
       shp.df <- ggplot2::fortify(shp, region = "latlong2region.id")
     }
 
