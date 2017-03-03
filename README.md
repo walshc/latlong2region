@@ -10,6 +10,12 @@ if (!require(devtools)) install.packages("devtools")
 devtools::install_github("walshc/latlong2region")
 ```
 
+### Note for Debain/Ubuntu users
+This package requires `rgdal` and will try install it if it's not already installed. In Debian/Ubuntu it will fail if you don't have `libgdal-dev` or `libproj-dev` installed. So before installation run:
+```bash
+sudo apt install libgdal-dev libproj-dev
+```
+
 ## Example Usage
 Download, extract and load a shapefile of US counties:
 ```r
